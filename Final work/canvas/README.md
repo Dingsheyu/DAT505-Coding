@@ -1,5 +1,7 @@
 # DAT505-GitHub
 ## B161006063  Shu Ding ##
+  * I was inspired by an astronomical book about Saturn, which I think is the most mysterious and romantic of the eight planets. Saturn's beautiful rings are actually tiny gravels. They buzz around Saturn. Saturn's dry and cold environment, described in classical astrology, seems to form a centripetal force that controls the rings by keeping them at a certain distance and at a certain height, producing different syllables, like celestial music. So I want to use this software to make a Saturn-like model.
+
 ```javascript
 var container = document.getElementById("container");
 var width = container.clientWidth;
@@ -17,7 +19,7 @@ camera.position.z = 500
 system = new THREE.Group(); // planetary system
 
   ```
-  * Create a scene, renderer, camera, and set the camera's position on the z-axis.
+  * Considering that the whole space is immeasurable and my level is limited, I chose black as the background color and some white dots represent other plants. So it is simple and clear, and it can highlight my main works very well.The next step is create a scene, renderer, camera, and set the camera's position on the z-axis.
 
 ```javascript
   new THREE.AmbientLight(0xFFFFFF, 0.2)
@@ -71,7 +73,7 @@ for (var p = 0; p < Math.PI * 2; p = p + Math.random() * 0.15) {
 
 system.add(asteroids);
 ```
-* Define the material and the wealthy planet related properties.
+* This step is define the material and the wealthy planet related properties.
 
 ```javascript
 system.add(asteroids);
@@ -80,11 +82,4 @@ system.rotation.x = 0.1;
 system.rotation.y = -.3;
 system.rotation.z = -0.4;
 ```
-* .Define the asteroid to rotate randomly according to the trajectory.
-
-
-
-
-*
-
-* Create an asteroid system and set the rotation of this system on the axis.
+* Last but not least, create an asteroid system and set the rotation of this system on the axis. I remember that one of our previous homework assignments was to change the static case material into a random rotation pattern (small color squares), so I used previous experience and similar methods (rewriting part of the code) to define an asteroid to rotate randomly according to its trajectory.
